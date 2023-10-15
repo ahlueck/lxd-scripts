@@ -25,10 +25,8 @@ chmod +x "$TMP"
 
 if [ "$(command -v bash)" ]; then
   echo "bash"
-  exit 1
-#  $(command -v sudo) bash "$TMP"
+  $(command -v sudo) bash "$TMP"
 else
   echo "sh"
-  exit 1
-#  sh "$TMP"
+  sh "$TMP"
 fi
