@@ -24,7 +24,9 @@ wget -O "$TMP" "$URL/$INSTALL_SCRIPT.sh"
 chmod +x "$TMP"
 
 if [ "$(command -v bash)" ]; then
+  echo "bash"
   $(command -v sudo) bash "$TMP"
 else
+  echo "sh"
   sh "$TMP"
 fi
